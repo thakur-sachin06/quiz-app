@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "question": "The simplest and most effective way to make a file available to your component is this: ",
+    "options": ["option 1", "option 2", "option 3", "option 4"],
+    "correctAnswer": "option 1"
+  },
+  {
+    "id": 2,
+    "question": "The simplest ",
+    "options": ["option 44", "option 77", "option 46", "option 7098"],
+    "correctAnswer": "option 44"
+  }
+]

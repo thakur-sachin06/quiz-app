@@ -1,0 +1,80 @@
+.home {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  margin: 60px 100px;
+  min-height: 800px;
+  max-height: 800px;
+  border: 1px solid lightgray;
+  grid-gap: 20px;
+}
+
+.answer-section {
+  border-right: 1px solid lightgray;
+}
+
+.quiz-section {
+  padding: 100px 200px;
+}
+
+.quiz-section__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.question-text {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.radio-group {
+  display: block;
+  width: 400px;
+}
+.radio-group > input {
+  visibility: hidden;
+  position: absolute;
+}
+.radio-group > input + div {
+  cursor: pointer;
+  border: 1px solid lightgray;
+  margin-bottom: 10px;
+}
+.radio-group > input:checked + div {
+  background-color: rgb(99, 158, 229);
+  font-weight: 600;
+  color: white;
+}
+
+.active-question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.unactive-question {
+  display: none;
+}
+
+.options {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.submit-btn {
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  background: rgb(71, 141, 71);
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  width: 200px;
+  color: white;
+  margin-top: 60px;
+}
+
+.disabled-btn {
+  cursor: not-allowed;
+  background: rgb(188, 188, 188);
+}
