@@ -9,9 +9,15 @@ const Home = () => {
   const [isTestSubmitted, setIsTestSubmitted] = useState(false);
   const [isTimerOver, setIsTimerOver] = useState(false);
 
+  const restartQuiz = () => {
+    setSelectedAnswers([]);
+    setIsTimerOver(false);
+    setIsTestSubmitted(false);
+  };
+
   return (
     <>
-      {!isTestSubmitted && (
+      {!isTestSubmitted && !isTimerOver && (
         <div className="home">
           <AnswerSection selectedAnswers={selectedAnswers} />
           <QuizSection
@@ -24,8 +30,12 @@ const Home = () => {
         </div>
       )}
 
-      {isTestSubmitted && (
-        <Result selectedAnswers={selectedAnswers} isTimerOver={isTimerOver} />
+      {(isTestSubmitted || isTimerOver) && (
+        <Result
+          selectedAnswers={selectedAnswers}
+          isTimerOver={isTimerOver}
+          restartQuiz={restartQuiz}
+        />
       )}
     </>
   );

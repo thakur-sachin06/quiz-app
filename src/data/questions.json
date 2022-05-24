@@ -1,14 +1,46 @@
 [
   {
     "id": 1,
-    "question": "The simplest and most effective way to make a file available to your component is this: ",
-    "options": ["option 1", "option 2", "option 3", "option 4"],
-    "correctAnswer": "option 1"
+    "question": "Which of the following is not javascript data types?",
+    "options": [
+      " Null type",
+      "Undefined type",
+      "Number type",
+      "All of the mentioned"
+    ],
+    "correctAnswer": "All of the mentioned"
   },
   {
     "id": 2,
-    "question": "The simplest ",
-    "options": ["option 44", "option 77", "option 46", "option 7098"],
-    "correctAnswer": "option 44"
+    "question": "Which JavaScript method is used to access an HTML element by id?",
+    "options": [
+      "getElementById()",
+      "getElement(id)",
+      "getElementById(id)",
+      "elementById(id)"
+    ],
+    "correctAnswer": "getElementById(id)"
+  },
+  {
+    "id": 3,
+    "question": "Which of the following is not javascript data types?",
+    "options": [
+      " Null type",
+      "Undefined type",
+      "Number type",
+      "All of the mentioned"
+    ],
+    "correctAnswer": "All of the mentioned"
+  },
+  {
+    "id": 4,
+    "question": "Which JavaScript method is used to access an HTML element by id?",
+    "options": [
+      "getElementById()",
+      "getElement(id)",
+      "getElementById(id)",
+      "elementById(id)"
+    ],
+    "correctAnswer": "getElementById(id)"
   }
 ]

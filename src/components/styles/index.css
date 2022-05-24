@@ -1,7 +1,7 @@
 .home {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  margin: 60px 100px;
+  grid-template-columns: 300px 1fr;
+  margin: 60px 80px;
   min-height: 800px;
   max-height: 800px;
   border: 1px solid lightgray;
@@ -13,7 +13,7 @@
 }
 
 .quiz-section {
-  padding: 100px 200px;
+  padding: 50px 200px;
 }
 
 .quiz-section__header {
@@ -25,6 +25,7 @@
 .question-text {
   font-weight: 600;
   font-size: 20px;
+  margin-bottom: 40px;
 }
 
 .radio-group {

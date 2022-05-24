@@ -1,16 +1,22 @@
 import React from "react";
-import "../styles/index.css";
+import "../styles/answerSection.css";
 
 const AnswerSection = ({ selectedAnswers }) => {
   return (
     <div className="answer-section">
-      <h5>Review Answers Here</h5>
-      {!!selectedAnswers.length &&
-        selectedAnswers.map((answer, index) => {
-          if (answer) {
-            return <div> {`#${index + 1}: ${answer}`} </div>;
-          }
-        })}
+      <h4>Review Answers Here</h4>
+      <div style={{ marginTop: "120px" }}>
+        {!!selectedAnswers.length &&
+          selectedAnswers.map((answer, index) => {
+            if (answer) {
+              return (
+                <div key={index} className="answers">{`#${
+                  index + 1
+                }: ${answer}`}</div>
+              );
+            }
+          })}
+      </div>
     </div>
   );
 };

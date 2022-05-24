@@ -1,0 +1,10 @@
+.answer-section {
+  border-right: 1px solid lightgray;
+}
+
+.answers {
+  margin-bottom: 20px;
+  color: rgb(51, 155, 51);
+  font-weight: 600;
+  font-size: 20px;
+}
