@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import AnswerSection from "./answerSection";
 import QuizSection from "./quizSection";
 import "../styles/index.css";
