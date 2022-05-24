@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import quizData from "../../data/questions.json";
 import "../styles/index.css";
+import Timer from "./timer";
 
 const QuizSection = ({
   selectedAnswers,
   setSelectedAnswers,
   setIsTestSubmitted,
+  isTestSubmitted,
+  setIsTimerOver,
 }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
@@ -31,10 +34,30 @@ const QuizSection = ({
 
   return (
     <div className="quiz-section">
+      <Timer
+        isTestSubmitted={isTestSubmitted}
+        setIsTimerOver={setIsTimerOver}
+      />
       <div className="quiz-section__header">
-        <button onClick={handlePrevQuestionChange2}>Prev</button>
+        <button
+          disabled={currentQuestion == 0}
+          className={`btn quiz-btn ${
+            currentQuestion == 0 ? "disabled-btn" : ""
+          }  `}
+          onClick={handlePrevQuestionChange2}
+        >
+          Prev
+        </button>
         <p>Attempt Question Here</p>
-        <button onClick={handleNextQuestionChange}>Next</button>
+        <button
+          disabled={currentQuestion == quizData.length - 1}
+          className={`btn quiz-btn ${
+            currentQuestion == quizData.length - 1 ? "disabled-btn" : ""
+          }  `}
+          onClick={handleNextQuestionChange}
+        >
+          Next
+        </button>
       </div>
       <div className="quiz-section__questions">
         <div>
@@ -74,9 +97,11 @@ const QuizSection = ({
         </div>
       </div>
       <button
-        onClick={() => setIsTestSubmitted(true)}
+        onClick={() => {
+          setIsTestSubmitted(true);
+        }}
         disabled={isDisable()}
-        className={`submit-btn ${isDisable() ? "disabled-btn" : ""} `}
+        className={`btn ${isDisable() ? "disabled-btn" : ""} `}
       >
         Submit
       </button>

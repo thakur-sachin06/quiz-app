@@ -2,7 +2,7 @@ import React from "react";
 import quizData from "../../data/questions.json";
 import "../styles/result.css";
 
-const Result = ({ selectedAnswers }) => {
+const Result = ({ selectedAnswers, isTimerOver }) => {
   let numOfCorrectAns = 0;
   const checkNumOfCorrectAnswers = () => {
     const answers = quizData.map((elt) => elt.correctAnswer);
@@ -20,17 +20,20 @@ const Result = ({ selectedAnswers }) => {
   return (
     <div className="result-section">
       <p className="success-text">
-        You have successfully submitted the assessment
+        {isTimerOver
+          ? "Time over!"
+          : "You have successfully submitted the assessment"}
       </p>
       <p>
-        <span>- Questions Asked: </span> {selectedAnswers.length}
+        <span>- Questions Asked: </span> {quizData.length}
       </p>
       <p>
-        <span>- Questions Correct: </span> {checkNumOfCorrectAnswers()}
+        <span>- Questions Correct: </span>{" "}
+        {selectedAnswers.length ? checkNumOfCorrectAnswers() : 0}
       </p>
       <p>
         <span>- Your Score: </span>
-        {(numOfCorrectAns * 100) / selectedAnswers.length}
+        {(numOfCorrectAns * 100) / quizData.length}
       </p>
       <button>Show Report</button>
     </div>

@@ -61,7 +61,7 @@
   border-radius: 10px;
 }
 
-.submit-btn {
+.btn {
   padding: 10px 30px;
   font-size: 18px;
   font-weight: 600;
@@ -76,5 +76,15 @@
 
 .disabled-btn {
   cursor: not-allowed;
-  background: rgb(188, 188, 188);
+  background: rgb(188, 188, 188) !important;
+}
+
+.timer {
+  color: rgb(229, 70, 70);
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.quiz-btn {
+  background: rgb(63, 63, 211);
 }
