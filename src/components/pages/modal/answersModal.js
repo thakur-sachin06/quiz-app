@@ -25,6 +25,7 @@ const AnswersModal = ({ selectedAnswers, setShowReportModal }) => {
       <button
         onClick={() => setShowReportModal(false)}
         className="btn quiz-btn"
+        style={{ marginTop: "20px" }}
       >
         Close Report
       </button>
